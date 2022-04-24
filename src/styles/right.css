@@ -1,0 +1,52 @@
+.right {
+    width: 60%;
+    /* border: 1px solid black; */
+    padding: 10px
+}
+
+.select {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px   
+}
+
+.code textarea, .userInput textarea {
+    width: 100%;
+    height: 600px;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: none
+}
+
+.userInput textarea {
+    height: 100px
+}
+
+.output .run {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px
+}
+
+.output .run button {
+    width: 90px;
+    padding: 5px;
+    cursor: pointer
+}
+
+.output .result {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px
+}
+
+@media screen and (max-width: 1000px) {
+    .right {
+        width: 100%
+    }
+}

@@ -1,0 +1,51 @@
+.left {
+    width: 40%;
+    /* border: 1px solid black; */
+    display: flex
+}
+
+.questionsList {
+    width: 10%
+}
+
+.questions {
+    width: 90%;
+    border: 2px solid lightgray;
+    border-top: none;
+    border-bottom: none;
+    padding: 10px
+}
+
+.list {
+    text-align: center;
+    padding: 10px 5px
+}
+
+.qList {
+    cursor: pointer
+}
+
+@media screen and (max-width: 1000px) {
+    .left {
+        width: 100%;
+        flex-direction: column
+    }
+
+    .questionsList {
+        width: 100%;
+        display: flex
+    }
+    
+    .questions {
+        border: 2px solid lightgray;
+        border-right: none;
+        border-left: none;
+        width: 100%;
+        padding: 10px
+    }
+
+    .qList {
+        padding: 10px 20px;
+    }
+    
+}

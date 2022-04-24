@@ -1,0 +1,12 @@
+.app {
+    width: 100%;
+    display: flex;
+    min-height: 100vh
+}
+
+
+@media screen and (max-width : 1000px) {
+    .app {
+        flex-direction: column
+    }
+}
