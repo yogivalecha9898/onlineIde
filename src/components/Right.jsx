@@ -63,6 +63,7 @@ const Right = () => {
         }
     }
 
+    console.log("KEY:", process.env.KEY)
     return (
         <div className="right">
             <div className="select">
