@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "../styles/right.css"
+import conf from "../config"
 
 const Right = () => {
 
@@ -16,7 +17,7 @@ const Right = () => {
                 'content-type': 'application/json',
                 'Content-Type': 'application/json',
                 'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com',
-                'X-RapidAPI-Key': 'f84c4e41d3mshf8390d33ddd20fdp17467bjsn87492f6e91c8'
+                'X-RapidAPI-Key': conf.key
             },
             body: JSON.stringify({
                 language_id : lang,
@@ -42,7 +43,7 @@ const Right = () => {
                     method: "GET",
                     headers: {
                         "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-                        "x-rapidapi-key": "f84c4e41d3mshf8390d33ddd20fdp17467bjsn87492f6e91c8"
+                        "x-rapidapi-key": conf.key
                     }
                 }
                 const getSolution = await fetch(`https://judge0-ce.p.rapidapi.com/submissions/${response.token}?base64_encoded=true`, optionsHere)
