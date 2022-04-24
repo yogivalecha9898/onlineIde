@@ -1,6 +1,5 @@
 import { useState } from "react"
 import "../styles/right.css"
-import conf from "../config"
 
 const Right = () => {
 
@@ -17,7 +16,7 @@ const Right = () => {
                 'content-type': 'application/json',
                 'Content-Type': 'application/json',
                 'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com',
-                'X-RapidAPI-Key': conf.key
+                'X-RapidAPI-Key': process.env.KEY
             },
             body: JSON.stringify({
                 language_id : lang,
@@ -43,7 +42,7 @@ const Right = () => {
                     method: "GET",
                     headers: {
                         "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-                        "x-rapidapi-key": conf.key
+                        "x-rapidapi-key": process.env.KEY
                     }
                 }
                 const getSolution = await fetch(`https://judge0-ce.p.rapidapi.com/submissions/${response.token}?base64_encoded=true`, optionsHere)
@@ -67,7 +66,7 @@ const Right = () => {
     return (
         <div className="right">
             <div className="select">
-                <p>Type your code here</p>
+                <p>Type your code here</p> 
                 <select onChange = {e => setLang(e.target.value)}>
                     <option value = "71">Python</option>
                     <option value = "62">Java</option>
